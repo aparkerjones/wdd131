@@ -1,0 +1,15 @@
+
+/* Apply these styles only at 500px and wider */
+@media (min-width: 500px) {
+
+  header {
+    background-color: #000;
+    color: #fff;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;                 /* equal gap */
+  }
+}

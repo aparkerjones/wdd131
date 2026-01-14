@@ -2,66 +2,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>WDD 131 – Dynamic Web Fundamentals – Parker Jones</title>
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals — Parker Jones. Course homepage covering HTML, CSS, JavaScript, responsive design, media queries, DOM scripting, and web fundamentals.">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals — Parker Jones. Course homepage with assignments and practice covering HTML, CSS, JavaScript, responsive design, media queries, DOM scripting, and web fundamentals.">
   <meta name="author" content="Parker Jones">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <script src="scripts/getdates.js" defer></script>
   <link rel="stylesheet" href="styles/base.css">
+
+  <script src="getdates.js" defer></script>
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
-
-    <nav aria-label="Primary navigation">
-      <ul>
-        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
-        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng#:~:text=25%20Jesus%20said,35%20Jesus%20wept." target="_blank" rel="noopener">Favorite Scripture</a></li>
-        <li><a href="./final-project/" aria-label="Final project folder">Final Project</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main>
-    <h1>Parker Jones</h1>
+  <nav class="top-nav" aria-label="Primary navigation">
+    <ul>
+      <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
+      <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng#:~:text=25%20Jesus%20said,35%20Jesus%20wept." target="_blank" rel="noopener">Scripture</a></li>
+      <li><a href="./final-project/">Final Project</a></li>
+    </ul>
+  </nav>
 
+  <h1 class="page-title">Parker Jones</h1>
+
+  <main class="cards">
     <section class="card">
-      <h2>About Me</h2>
-      <img src="images/about-me.jpg" alt="Self Portrait" width="800" height="533">
-      <p>
-        Hi, I’m Parker Jones from Boise, Idaho. This site is where I will practice html, css, and JavaScript for the course WDD 131.
-      </p>
+      <div class="card-header">About Me</div>
+
+      <div class="card-body">
+        <div class="card-content">
+          <p>
+             Hello! I’m Parker Jones from Boise, Idaho. I currently work at Micron Technology as and Equipment Technician. I love the outdoors and spending time with my family.
+          </p>
+        </div>
+
+        <figure class="card-media">
+          <img src="images/about-me.jpg" alt="Parker Jones" width="320" height="420" loading="lazy">
+        </figure>
+      </div>
     </section>
 
     <section class="card">
-      <h2>Boise, Idaho</h2>
-      <img src="images/boise.jpg" alt="Downtown Boise skyline with foothills" width="800" height="533" loading="lazy">
-      <p>
-        Boise has great access to trails, rivers, and a strong tech community. I’ll use this section for course notes,
-        small experiments, and links to weekly assignments as the semester progresses.
-      </p>
+      <div class="card-header">Boise, Idaho</div>
+
+      <div class="card-body">
+        <div class="card-content">
+          <p>
+            Boise has great access to trails, rivers, and a strong tech community. It is a wonderful place to live and work.
+          </p>
+        </div>
+
+        <figure class="card-media">
+          <img src="images/boise.jpg" alt="Boise, Idaho skyline" width="320" height="240" loading="lazy">
+        </figure>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; <span id="currentyear"></span> Parker Jones · Idaho, USA</p>
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> • Parker Jones • Idaho, USA</p>
     <p id="lastModified"></p>
   </footer>
-
-  <script>
-    // Current year
-    document.getElementById('currentyear').textContent = new Date().getFullYear();
-
-    // Last modified
-    document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
-  </script>
 </body>
 </html>

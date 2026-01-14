@@ -8,6 +8,23 @@ body {
   line-height: 1.6;
 }
 
+main {
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .site-header {
   background: #1f4a69;
   color: #fff;
@@ -23,7 +40,8 @@ body {
 }
 
 .top-nav {
-  background: #3b3b3b;
+  background: #3e2e42;
+  border-radius: 4px;
 }
 .top-nav ul {
   list-style: none;

@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WDD 131 – Dynamic Web Fundamentals – Parker Jones</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals — Parker Jones. Course homepage covering HTML, CSS, JavaScript, responsive design, media queries, DOM scripting, and web fundamentals.">
+  <meta name="author" content="Parker Jones">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="scripts/getdates.js" defer></script>
+  <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng#:~:text=25%20Jesus%20said,35%20Jesus%20wept." target="_blank" rel="noopener">Favorite Scripture</a></li>
+        <li><a href="./final-project/" aria-label="Final project folder">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Parker Jones</h1>
+
+    <section class="card">
+      <h2>About Me</h2>
+      <img src="images/about-me.jpg" alt="Self Portrait" width="800" height="533">
+      <p>
+        Hi, I’m Parker Jones from Boise, Idaho. This site is where I will practice html, css, and JavaScript for the course WDD 131.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Boise, Idaho</h2>
+      <img src="images/boise.jpg" alt="Downtown Boise skyline with foothills" width="800" height="533" loading="lazy">
+      <p>
+        Boise has great access to trails, rivers, and a strong tech community. I’ll use this section for course notes,
+        small experiments, and links to weekly assignments as the semester progresses.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Parker Jones · Idaho, USA</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    // Current year
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+
+    // Last modified
+    document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
+  </script>
+</body>
+</html>

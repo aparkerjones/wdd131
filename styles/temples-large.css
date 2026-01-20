@@ -9,17 +9,26 @@
   }
 }
 
+/* bigger screens - show full nav and 3 cols */
 @media (min-width: 800px) {
   .hamburger {
     display: none;
   }
+  
   .top-nav {
     display: block;
   }
-    .top-nav ul { gap: 1rem 2rem; }
-    main { max-width: 1200px; }
-    .album-grid {
+  
+  .top-nav ul { 
+    gap: 1rem 2rem; 
+  }
+  
+  main { 
+    max-width: 1200px; 
+  }
+  
+  .album-grid {
     grid-template-columns: repeat(3, minmax(240px, 1fr));
     gap: 1.1rem;
-}
+  }
 }

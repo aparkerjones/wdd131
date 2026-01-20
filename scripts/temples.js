@@ -1,42 +1,41 @@
+// handle mobile nav
 (function () {
   const header = document.querySelector('.site-header');
-  const button = document.getElementById('hamburger');
+  const btn = document.getElementById('hamburger');
   const menu = document.getElementById('primary-menu');
 
-  if (!header || !button || !menu) return;
+  if (!header || !btn || !menu) return;
 
-  const openMenu = () => {
+  const open = () => {
     header.classList.add('nav-open');
-    button.setAttribute('aria-expanded', 'true');
-    button.textContent = '✕';        // change symbol to "X"
+    btn.setAttribute('aria-expanded', 'true');
+    btn.textContent = '✕';
   };
 
-  const closeMenu = () => {
+  const close = () => {
     header.classList.remove('nav-open');
-    button.setAttribute('aria-expanded', 'false');
-    button.textContent = '☰';        // change symbol back to hamburger
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = '☰';
   };
 
-  const toggleMenu = () => {
-    const isOpen = header.classList.contains('nav-open');
-    isOpen ? closeMenu() : openMenu();
+  const toggle = () => {
+    header.classList.contains('nav-open') ? close() : open();
   };
 
-  button.addEventListener('click', toggleMenu);
+  btn.addEventListener('click', toggle);
 
-  // Optional: close menu when focus leaves nav on mobile
+  // close when clicking outside
   document.addEventListener('click', (e) => {
-    const clickInside = header.contains(e.target) || menu.contains(e.target);
-    if (!clickInside && header.classList.contains('nav-open')) {
-      closeMenu();
+    if (!header.contains(e.target) && !menu.contains(e.target) && header.classList.contains('nav-open')) {
+      close();
     }
   });
 
-  // Optional: close on Escape key
+  // close on escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && header.classList.contains('nav-open')) {
-      closeMenu();
-      button.focus();
+      close();
+      btn.focus();
     }
   });
 })();

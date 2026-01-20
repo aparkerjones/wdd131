@@ -1,18 +1,25 @@
 
 :root {
-  --header-bg: #1f4a69;   /* deep blue */
-  --nav-bg: #424141;      /* dark gray */
+  --header-bg: #1f4a69;
+  --nav-bg: #424141;
+  --footer-bg: #1f4a69;
+  --footer-accent: #e6ff72;
   --surface: #ffffff;
   --text: #1b2430;
   --muted: #556070;
   --border: #cdd6df;
   --accent: #1a4e84;
-  --footer-bg: #1f4a69;
-  --footer-accent: #e6ff72;  /* for last-modified highlight */
 }
 
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+* { 
+  box-sizing: border-box; 
+}
+
+html { 
+  -webkit-text-size-adjust: 100%; 
+  text-size-adjust: 100%; 
+}
+
 body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -21,24 +28,24 @@ body {
   line-height: 1.6;
 }
 
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a { 
+  color: var(--accent); 
+  text-decoration: none; 
+}
 
+a:hover { 
+  text-decoration: underline; 
+  text-underline-offset: 3px; 
+}
+
+/* Header */
 .site-header {
   background: var(--header-bg);
   color: #fff;
   padding: 1rem;
 }
-#course-title {
-  display: block;
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin: 0;
-  letter-spacing: 0.3px;
-}
 
-
+/* Mobile hamburger button */
 .hamburger {
   display: inline-flex;
   align-items: center;
@@ -59,21 +66,16 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   display: none;
 }
 
-.site-header.nav-open + .top-nav,
 .site-header.nav-open .top-nav,
 .nav-open .top-nav {
   display: block;
 }
 
 .top-nav {
-  background: #3b3b3b;
+  background: var(--nav-bg);
   border-top: 1px solid rgba(255,255,255,0.12);
 }
 
-
-.top-nav {
-  background: var(--nav-bg);
-}
 .top-nav ul {
   list-style: none;
   margin: 0;
@@ -83,6 +85,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   justify-content: center;
   gap: 0.75rem 1.25rem;
 }
+
 .top-nav a {
   color: #eaeaea;
   font-weight: 600;
@@ -90,6 +93,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   border-radius: 6px;
   transition: background-color 180ms ease, color 180ms ease;
 }
+
 .top-nav a:hover,
 .top-nav a:focus-visible {
   background: rgba(255, 255, 255, 0.12);
@@ -111,6 +115,7 @@ main {
   padding: 0 1rem;
 }
 
+/* Gallery */
 .album-grid {
   display: grid;
   grid-template-columns: 1fr;

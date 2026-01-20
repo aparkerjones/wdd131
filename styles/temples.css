@@ -1,0 +1,141 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+:root {
+  --header-bg: #1f4a69;   /* deep blue */
+  --nav-bg: #424141;      /* dark gray */
+  --surface: #ffffff;
+  --text: #1b2430;
+  --muted: #556070;
+  --border: #cdd6df;
+  --accent: #1a4e84;
+  --footer-bg: #1f4a69;
+  --footer-accent: #e6ff72;  /* for last-modified highlight */
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f7fb;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.site-header {
+  background: var(--header-bg);
+  color: #fff;
+  padding: 1rem;
+}
+#course-title {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+
+.hamburger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 6px;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.35rem 0.6rem;
+  margin: 0.5rem auto 0;
+  cursor: pointer;
+}
+
+.top-nav {
+  display: none;
+}
+
+.site-header.nav-open + .top-nav,
+.site-header.nav-open .top-nav,
+.nav-open .top-nav {
+  display: block;
+}
+
+.top-nav {
+  background: #3b3b3b;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+
+.top-nav {
+  background: var(--nav-bg);
+}
+.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.6rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+}
+.top-nav a {
+  color: #eaeaea;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+.top-nav a:hover,
+.top-nav a:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  outline: none;
+}
+
+.page-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 1rem 0 0.75rem;
+  padding: 0 1rem;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.album-grid figure {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.album-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.album-grid figcaption {
+  padding: 0.75rem 0.9rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}

@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Temple Album – Parker Jones</title>
+  <meta name="description" content="Temple Album — Parker Jones. A simple, mobile-first gallery of temple images with captions." />
+  <meta name="author" content="Parker Jones" />
+
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="temples.css" />
+  <link rel="stylesheet" href="temples-large.css" />
+
+  <script src="getdates.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <span id="course-title">Temple Album</span>
+
+  <button class="hamburger" id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-menu">
+    ☰
+  </button>
+
+  <nav class="top-nav" id="primary-menu" aria-label="Primary navigation">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="#old">Old</a></li>
+      <li><a href="#new">New</a></li>
+      <li><a href="#large">Large</a></li>
+      <li><a href="#small">Small</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <nav class="top-nav" aria-label="Album navigation">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#old">Old</a></li>
+        <li><a href="#new">New</a></li>
+        <li><a href="#large">Large</a></li>
+        <li><a href="#small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="page-title">Temple Album</h1>
+
+    <section class="album-grid" aria-label="Temple gallery">
+
+      <figure id="old" class="card">
+        <img src="images/temple-placeholder.jpg" alt="Temple exterior placeholder" loading="lazy" width="800" height="533" />
+        <figcaption>Temple 01</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="images/temple-placeholder.jpg" alt="Temple exterior placeholder" loading="lazy" width="800" height="533" />
+        <figcaption>Temple 02.</figcaption>
+      </figure>
+
+      <figure class="card" id="new">
+        <img src="images/temple-placeholder.jpg" alt="Temple exterior placeholder" loading="lazy" width="800" height="533" />
+        <figcaption>Placeholder caption for Temple 03. Replace with name, city, and a brief note.</figcaption>
+      </figure>
+
+      <figure class="card" id="large">
+        <img src="images/temple-placeholder.jpg" alt="Temple exterior placeholder" loading="lazy" width="800" height="533" />
+        <figcaption>Placeholder caption for Temple 04. Replace with name, city, and a brief note.</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="images/temple-placeholder.jpg" alt="Temple exterior placeholder" loading="lazy" width="800" height="533" />
+        <figcaption>Placeholder caption for Temple 05. Replace with name, city, and a brief note.</figcaption>
+      </figure>
+
+      <figure class="card" id="small">
+        <img src="images/temple-placeholder.jpg" alt="Temple exterior placeholder" loading="lazy" width="800" height="533" />
+        <figcaption>Placeholder caption for Temple 06. Replace with name, city, and a brief note.</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="images/temple-placeholder.jpg" alt="Temple exterior placeholder" loading="lazy" width="800" height="533" />
+        <figcaption>Placeholder caption for Temple 07. Replace with name, city, and a brief note.</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="images/temple-placeholder.jpg" alt="Temple exterior placeholder" loading="lazy" width="800" height="533" />
+        <figcaption>Placeholder caption for Temple 08. Replace with name, city, and a brief note.</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="images/temple-placeholder.jpg" alt="Temple exterior placeholder" loading="lazy" width="800" height="533" />
+        <figcaption>Placeholder caption for Temple 09. Replace with name, city, and a brief note.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> • Parker Jones • Idaho, USA</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

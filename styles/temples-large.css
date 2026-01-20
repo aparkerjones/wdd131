@@ -9,12 +9,8 @@
   }
 }
 
-@media (min-width: 800px) {
-  .album-grid {
-    grid-template-columns: repeat(3, minmax(240px, 1fr));
-    gap: 1.1rem;
-  }
-}
+
+
 
 @media (min-width: 900px) {
   .top-nav ul { gap: 1rem 2rem; }
@@ -28,4 +24,8 @@
   .top-nav {
     display: block;
   }
+    .album-grid {
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    gap: 1.1rem;
+}
 }

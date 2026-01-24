@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boise, Idaho — Place Page</title>
+  <meta name="description" content="Responsive place page for Boise, Idaho with hero image, data and weather panels, built for WDD131." />
+  <link rel="preload" as="image" imagesrcset="images/hero-small.webp 480w, images/hero-medium.webp 900w, images/hero-large.webp 1600w" imagesizes="100vw">
+  <link rel="stylesheet" href="styles/place.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Boise, Idaho</h1>
+    <p class="tagline">City of Trees • Boise River • Foothills</p>
+  </header>
+
+  <main>
+    <figure class="hero">
+      <img src="images/boise.jpg"
+           srcset="images/boise.jpg 480w, images/boise.jpg 900w"
+           sizes="(min-width: 900px) 100vw, 100vw"
+           width="1600" height="900"
+           alt="Stylized illustration of Boise skyline, river and foothills" />
+      <figcaption>Boise skyline and the Boise River in late summer.</figcaption>
+    </figure>
+
+    <section class="panels">
+      <section class="panel about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Boise</h2>
+        <p>Boise is Idaho’s capital and the most populous city in the state, known for its riverfront parks, cycling paths along the Greenbelt, and trail access to the Boise Foothills. The nickname “City of Trees” reflects its extensive urban canopy and outdoor focus.</p>
+        <ul class="facts">
+          <li><strong>State:</strong> Idaho</li>
+          <li><strong>Region:</strong> Treasure Valley</li>
+          <li><strong>Elevation:</strong> ~2,700 ft (820 m)</li>
+          <li><strong>Known for:</strong> Outdoor recreation, Basque culture, and a vibrant downtown</li>
+        </ul>
+      </section>
+      <section class="panel weather" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Weather</h2>
+        <div class="weather-grid">
+          <div class="icon-mobile" aria-hidden="true">
+            <img src="images/weather.svg" alt="" width="56" height="56" />
+          </div>
+          <dl class="weather-stats">
+            <div>
+              <dt>Conditions</dt>
+              <dd id="conditions">Partly Cloudy</dd>
+            </div>
+            <div>
+              <dt>Temperature</dt>
+              <dd><span id="temperature">41</span> <span aria-label="degrees Fahrenheit">°F</span></dd>
+            </div>
+            <div>
+              <dt>Wind</dt>
+              <dd><span id="wind">8</span> mph</dd>
+            </div>
+            <div>
+              <dt>Wind Chill</dt>
+              <dd id="windchill">N/A</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Parker Jones</p>
+    <p>Last modified: <span id="last-modified"></span></p>
+  </footer>
+
+  <script src="scripts/place.js" defer></script>
+</body>
+</html>

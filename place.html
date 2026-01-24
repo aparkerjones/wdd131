@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Boise, Idaho — Place Page</title>
-  <meta name="description" content="Responsive place page for Boise, Idaho with hero image, data and weather panels, built for WDD131." />
-  <link rel="preload" as="image" imagesrcset="images/hero-small.webp 480w, images/hero-medium.webp 900w, images/hero-large.webp 1600w" imagesizes="100vw">
-  <link rel="stylesheet" href="styles/place.css" />
+  <meta name="description" content="A mobile responsive page about Boise, Idaho.">
+  <meta name="author" content="Parker Jones">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/place.css">
+
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/place.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -16,11 +25,11 @@
 
   <main>
     <figure class="hero">
-      <img src="images/boise.jpg"
-           srcset="images/boise.jpg 480w, images/boise.jpg 900w"
-           sizes="(min-width: 900px) 100vw, 100vw"
+      <img src="images/boise-large.webp"
+           srcset="images/boise-small.webp 480w, images/boise-medium.webp 900w, images/boise-large.webp 1600w"
+           sizes="(min-width: 900px) 100vw, (min-width: 480px) 100vw, 100vw"
            width="1600" height="900"
-           alt="Stylized illustration of Boise skyline, river and foothills" />
+           alt="Boise skyline and the Boise River in late summer" />
       <figcaption>Boise skyline and the Boise River in late summer.</figcaption>
     </figure>
 
@@ -64,11 +73,9 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Parker Jones</p>
-    <p>Last modified: <span id="last-modified"></span></p>
-  </footer>
-
-  <script src="scripts/place.js" defer></script>
+<footer class="site-footer">
+  <p>&copy; <span id="currentyear"></span> • Parker Jones • Idaho, USA</p>
+  <p id="lastModified"></p>
+</footer>
 </body>
 </html>

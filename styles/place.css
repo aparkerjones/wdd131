@@ -1,17 +1,21 @@
-:root{
+:root {
   --bg: #f7f9fc;
   --text: #1f2937;
   --muted: #6b7280;
   --accent: #2e86de;
   --accent-2: #2ecc71;
   --panel: #ffffff;
-  --shadow: 0 6px 20px rgba(0,0,0,.08);
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   --radius: 14px;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -30,20 +34,20 @@ img {
 .site-header {
   padding: clamp(1rem, 2.5vw, 2rem) clamp(1rem, 4vw, 3rem);
   background: linear-gradient(135deg, var(--accent) 0%, #1b4f72 60%);
-  color: #fff;
+  color: #ffffff;
   text-align: center;
 }
 
 .site-header h1 {
   margin: 0;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .site-header .tagline {
-  margin: .25rem 0 0;
+  margin: 0.25rem 0 0;
   color: #e5ecff;
-  font-size: clamp(.95rem, 1.5vw, 1.05rem);
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
 }
 
 main {
@@ -57,7 +61,7 @@ main {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  background: #000;
+  background: #000000;
 }
 
 .hero img {
@@ -68,10 +72,10 @@ main {
 
 .hero figcaption {
   margin: 0;
-  padding: .5rem .75rem;
-  font-size: .9rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
   color: #f4f6f8;
-  background: rgba(0,0,0,.45);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .panels {
@@ -92,12 +96,12 @@ main {
   margin-bottom: 1rem;
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   color: #0f2a47;
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
 }
 
 .about p {
-  margin-top: .25rem;
-  margin-bottom: .75rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .facts {
@@ -107,7 +111,7 @@ main {
 }
 
 .facts li {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -119,11 +123,10 @@ main {
   color: var(--accent);
 }
 
-/* Weather panel */
 .weather .weather-grid {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: .75rem 1rem;
+  gap: 0.75rem 1rem;
   align-items: center;
 }
 
@@ -139,11 +142,11 @@ main {
 .weather dt {
   font-weight: 600;
   color: var(--muted);
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .weather dd {
-  margin: 0 0 .4rem 0;
+  margin: 0 0 0.4rem 0;
   font-size: 1.1rem;
   color: var(--text);
 }
@@ -152,14 +155,12 @@ main {
   margin-bottom: 0;
 }
 
-/* Responsive for medium screens */
 @media (min-width: 800px) {
   .panels {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* Large screens: hide mobile icon and show emoji in header */
 @media (min-width: 900px) {
   .weather h2::after {
     content: "  ⛅";
@@ -178,9 +179,9 @@ main {
   color: #334155;
   border-top: 1px solid #e5e7eb;
   text-align: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .site-footer p {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }

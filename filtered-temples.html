@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+
+  <title>Temple Album – Parker Jones</title>
+  <meta name="description" content="Temple Album — Parker Jones. A simple, mobile-compatible gallery of temple images with captions." >
+  <meta name="author" content="Parker Jones" >
+
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+
+    <button class="hamburger" id="hamburger"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-menu">
+      ☰
+    </button>
+
+    <nav class="top-nav" id="primary-menu" aria-label="Primary navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#old">Old</a></li>
+        <li><a href="#new">New</a></li>
+        <li><a href="#large">Large</a></li>
+        <li><a href="#small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="page-title">Temple Album</h1>
+
+    <section class="album-grid" id="album-grid" aria-label="Temple gallery">
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> • Parker Jones • Idaho, USA</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

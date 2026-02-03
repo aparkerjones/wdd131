@@ -1,7 +1,6 @@
 
 'use strict';
 
-/* ---------- Utilities ---------- */
 const $ = (sel, scope = document) => scope.querySelector(sel);
 const $$ = (sel, scope = document) => Array.from(scope.querySelectorAll(sel));
 const getJSON = (key, fallback) => {
@@ -10,22 +9,32 @@ const getJSON = (key, fallback) => {
 };
 const setJSON = (key, value) => localStorage.setItem(key, JSON.stringify(value));
 
-/* ---------- Theme ---------- */
 function getSystemPrefersDark() { return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; }
 function applyTheme(theme) {
   const html = document.documentElement;
-  if (theme === 'dark') html.setAttribute('data-theme', 'dark');
-  else html.removeAttribute('data-theme');
+
+  html.setAttribute('data-theme', theme);
+
   const btn = $('#theme-toggle');
-  if (btn) btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
-  if (btn) btn.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+  if (btn) {
+    btn.setAttribute(
+      'aria-label',
+      theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+    );
+    btn.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+  }
 }
+
 function initTheme() {
   const saved = localStorage.getItem('theme');
   const theme = saved ? saved : (getSystemPrefersDark() ? 'dark' : 'light');
+
   applyTheme(theme);
+
   $('#theme-toggle')?.addEventListener('click', () => {
-    const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = current === 'dark' ? 'light' : 'dark';
+
     applyTheme(newTheme);
     localStorage.setItem('theme', newTheme);
   });

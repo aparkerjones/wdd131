@@ -32,6 +32,17 @@ html[data-theme="dark"] {
   --border: #232836;
 }
 
+html[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #1b1b1b;
+  --muted: #5a5a5a;
+  --brand: #1e88e5;
+  --brand-700: #1565c0;
+  --surface: #f6f8fb;
+  --border: #e3e8f0;
+}
+
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {

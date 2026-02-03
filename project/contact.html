@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact & Sign Up | At‑Home Piano Lessons</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+
+  <meta name="description" content="Contact us to get started with at-home piano lessons.">
+</head>
+<body data-page="contact">
+
+<a href="#main" class="skip-link">Skip to content</a>
+<header>
+  <div class="container navbar" role="navigation" aria-label="Main">
+    <a class="brand" href="index.html"><img src="images/favicon.svg" alt="Logo"><span>At‑Home Piano Lessons</span></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">Dark mode</button>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section>
+    <h1>Contact & Sign Up</h1>
+    <p>Have a question or ready to begin? Send a quick message, and we’ll reply with next steps.</p>
+
+    <div id="form-status" class="" aria-live="polite"></div>
+
+    <form id="contact-form">
+      <div>
+        <label for="name">Full name</label>
+        <input id="name" name="name" autocomplete="name" required>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+
+      <div>
+        <label for="skill">Skill level</label>
+        <select id="skill" name="skill">
+          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Advanced</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="availability">Preferred availability</label>
+        <select id="availability" name="availability">
+          <option>Weekdays</option>
+          <option>Evenings</option>
+          <option>Weekends</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your goals or any questions."></textarea>
+      </div>
+
+      <button type="submit" class="btn primary">Send</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>What to Expect</h2>
+    <ul class="list">
+      <li>We’ll email you within 1–2 business days.</li>
+      <li>You’ll receive a recommended starting lesson and practice plan.</li>
+      <li>No pressure—ask questions and start when you’re ready.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; <span id="year"></span> At‑Home Piano Lessons • <a href="references.html">References</a></p>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+
+</body>
+</html>

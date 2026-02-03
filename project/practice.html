@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Practice & Progress | At‑Home Piano Lessons</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+
+  <meta name="description" content="Track piano practice, view weekly totals, and get level-based tips to improve.">
+</head>
+<body data-page="practice">
+
+<a href="#main" class="skip-link">Skip to content</a>
+<header>
+  <div class="container navbar" role="navigation" aria-label="Main">
+    <a class="brand" href="index.html"><img src="images/favicon.svg" alt="Logo"><span>At‑Home Piano Lessons</span></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">Dark mode</button>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section>
+    <h1>Practice & Progress</h1>
+    <p class="meta">Log your practice time and see your weekly total. Tips adjust based on your level.</p>
+
+    <form id="practice-form" aria-describedby="practice-help">
+      <div>
+        <label for="minutes">Minutes practiced today</label>
+        <input type="number" id="minutes" min="1" inputmode="numeric" placeholder="e.g., 20" required>
+        <p id="practice-help" class="help">Add minutes for today. You can add multiple entries; they’ll be summed.</p>
+      </div>
+
+      <div>
+        <label for="practice-level">Your current level</label>
+        <select id="practice-level" required>
+          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Advanced</option>
+        </select>
+      </div>
+
+      <div style="display:flex; gap:.5rem; flex-wrap:wrap;">
+        <button type="submit" class="btn primary">Add Practice</button>
+        <button type="button" id="reset-week" class="btn outline">Reset Last 7 Days</button>
+      </div>
+    </form>
+  </section>
+
+  <section>
+    <h2>This Week</h2>
+    <table class="table" aria-describedby="weekly-total-desc">
+      <thead>
+        <tr><th scope="col">Date</th><th scope="col">Minutes</th></tr>
+      </thead>
+      <tbody id="practice-tbody"></tbody>
+    </table>
+    <p id="weekly-total-desc" class="meta">Your total across the last 7 days is shown below.</p>
+    <p><strong>Total:</strong> <span id="weekly-total">0 min</span></p>
+    <p class="notice" id="practice-tip" aria-live="polite">Tips will appear based on your selected level.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; <span id="year"></span> At‑Home Piano Lessons • <a href="references.html">References</a></p>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+
+</body>
+</html>

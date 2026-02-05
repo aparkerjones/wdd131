@@ -11,8 +11,8 @@ const productSelect = document.querySelector("#productName");
 if (productSelect) {
   products.forEach((product) => {
     const option = document.createElement("option");
-    option.value = product.id;        // required: id as value [1](https://byui-cse.github.io/wdd131-ww-course/week05/assignment-05.html)
-    option.textContent = product.name; // required: name as display [1](https://byui-cse.github.io/wdd131-ww-course/week05/assignment-05.html)
+    option.value = product.id;
+    option.textContent = product.name;
     productSelect.appendChild(option);
   });
 }

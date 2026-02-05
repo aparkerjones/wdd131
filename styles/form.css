@@ -1,10 +1,10 @@
 :root{
   --bg: #0b1220;
-  --panel: rgba(255,255,255,.04);
+  --panel: #ffffff0a;
   --text: #f3f6ff;
   --muted: #c9d3ee;
   --accent: #67e8f9;
-  --border: rgba(255,255,255,.16);
+  --border: #ffffff29;
   --danger: #ff6b6b;
   --radius: 14px;
 }
@@ -69,16 +69,16 @@ textarea{
   width: 100%;
   padding: .7rem .75rem;
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,.22);
-  background: rgba(10,16,28,.65);
+  border: 1px solid #ffffff38;
+  background: #0a101ca6;
   color: var(--text);
 }
 
 textarea{ resize: vertical; }
 
 input:focus, select:focus, textarea:focus{
-  outline: 3px solid rgba(103,232,249,.35);
-  border-color: rgba(103,232,249,.7);
+  outline: 3px solid #67e8f959;
+  border-color: #67e8f9b3;
 }
 
 .rating{
@@ -92,16 +92,16 @@ input:focus, select:focus, textarea:focus{
 }
 
 .rating label{
-  border: 1px solid rgba(255,255,255,.18);
+  border: 1px solid #ffffff2e;
   padding: .6rem .75rem;
   border-radius: 12px;
   cursor: pointer;
-  background: rgba(10,16,28,.35);
+  background: #0a101c59;
 }
 
 .rating input:checked + label{
-  border-color: rgba(103,232,249,.8);
-  background: rgba(103,232,249,.12);
+  border-color: #67e8f9cc;
+  background: #67e8f91f;
 }
 
 .checks{

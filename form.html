@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Review Form</title>
+
+  <!-- TODO: UPDATE author + description if your class expects it -->
+  <meta name="description" content="WDD 131 W05 Product Review Form." />
+  <meta name="author" content="<!-- TODO: YOUR NAME HERE -->" />
+
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/form.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form method="get" action="review.html">
+      <fieldset>
+        <legend>Product</legend>
+
+        <label for="productName">
+          Product Name <span class="req" aria-hidden="true">*</span>
+        </label>
+
+        <select id="productName" name="productId" required>
+          <option value="" disabled selected>Select a Product ...</option>
+          <!-- Options populated by scripts/form.js -->
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Overall Rating <span class="req" aria-hidden="true">*</span></legend>
+
+        <div class="rating" role="radiogroup" aria-label="Overall rating">
+          <input type="radio" id="rate1" name="rating" value="1" required />
+          <label for="rate1">★☆☆☆☆</label>
+
+          <input type="radio" id="rate2" name="rating" value="2" />
+          <label for="rate2">★★☆☆☆</label>
+
+          <input type="radio" id="rate3" name="rating" value="3" />
+          <label for="rate3">★★★☆☆</label>
+
+          <input type="radio" id="rate4" name="rating" value="4" />
+          <label for="rate4">★★★★☆</label>
+
+          <input type="radio" id="rate5" name="rating" value="5" />
+          <label for="rate5">★★★★★</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Installation</legend>
+
+        <label for="installDate">
+          Date of Installation <span class="req" aria-hidden="true">*</span>
+        </label>
+
+        <input type="date" id="installDate" name="installDate" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Useful Features (check all that apply)</legend>
+
+        <div class="checks">
+          <div class="check">
+            <input type="checkbox" id="durability" name="features" value="Durability" />
+            <label for="durability">Durability</label>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" id="easeOfUse" name="features" value="Ease of Use" />
+            <label for="easeOfUse">Ease of Use</label>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" id="performance" name="features" value="Performance" />
+            <label for="performance">Performance</label>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" id="design" name="features" value="Design" />
+            <label for="design">Design</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Written Review (Optional)</legend>
+
+        <label for="writtenReview">Your Review</label>
+        <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Name (Optional)</legend>
+
+        <label for="userName">Your Name</label>
+        <input type="text" id="userName" name="userName" autocomplete="name" />
+      </fieldset>
+
+      <div class="actions">
+        <input type="submit" value="Post Review" />
+      </div>
+    </form>
+  </main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="currentyear"></span> • Parker Jones • Idaho, USA</p>
+  <p id="lastModified"></p>
+</footer>
+</body>
+</html>

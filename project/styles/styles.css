@@ -152,11 +152,16 @@ header {
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
+  transition: opacity 0.2s ease;
+}
+
+.brand:hover {
+  opacity: 0.8;
 }
 
 .brand img {
-  width: 24px;
-  height: 24px;
+  height: 40px;
+  width: auto;
 }
 
 nav ul {
@@ -172,6 +177,12 @@ nav a {
   color: var(--text);
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background: var(--surface);
+  color: var(--brand);
 }
 
 nav a[aria-current="page"] {
@@ -296,12 +307,19 @@ nav a[aria-current="page"] {
   overflow: clip;
   background: transparent;
   backdrop-filter: saturate(1.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
   width: 100%;
   height: 180px;
-  object-fit: contain;
+  object-fit: fill;
   display: block;
   /* White/dark bg adapts to theme for sheet music images */
   background: var(--white);
@@ -345,6 +363,11 @@ footer {
 footer a {
   color: var(--brand);
   text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 form {

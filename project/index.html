@@ -2,22 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>At‑Home Piano Lessons | Learn Piano Comfortably</title>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images/piano-logo.png" type="logo">
-<link rel="stylesheet" href="styles/styles.css">
-
+  <link rel="icon" href="images/piano-logo.png" type="image/png">
+  <link rel="stylesheet" href="styles/styles.css">
   <meta name="description" content="Beginner to advanced at-home piano lessons. Learn with structured lessons, practice guidance, and supportive feedback.">
+  <script src="scripts/main.js" defer></script>
 </head>
 <body data-page="home">
 
 <a href="#main" class="skip-link">Skip to content</a>
 <header>
-  <div class="container navbar" role="navigation" aria-label="Main">
+  <div class="container navbar">
     <a class="brand" href="index.html"><img src="images/piano-logo.png" alt="Logo"><span>At‑Home Piano Lessons</span></a>
-    <nav>
+    <nav aria-label="Main">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="lessons.html">Lessons</a></li>
@@ -31,19 +30,25 @@
 
 <main id="main" class="container">
   <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <h1>Learn Piano at Home—Clear Lessons, Real Progress</h1>
-        <p>Structured lesson paths, step‑by‑step practice guidance, and helpful feedback designed for beginners through advanced players.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="lessons.html">Explore Lessons</a>
-          <a class="btn outline" href="contact.html">Get Started</a>
-        </div>
+    <picture class="hero-image">
+      <img src="images/piano-hero-800w.jpg" 
+           srcset="images/piano-hero-400w.jpg 400w, 
+                   images/piano-hero-800w.jpg 800w, 
+                   images/piano-hero-1200w.jpg 1200w"
+           sizes="(max-width: 1200px) 92vw, 1100px"
+           alt="Piano keys and lesson banner" 
+           width="1200" 
+           height="800" 
+           decoding="async" 
+           fetchpriority="high">
+    </picture>
+    <div class="hero-overlay">
+      <h1>Learn Piano at Home—Clear Lessons, Real Progress</h1>
+      <p>Structured lesson paths, step‑by‑step practice guidance, and helpful feedback designed for beginners through advanced players.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="lessons.html">Explore Lessons</a>
+        <a class="btn outline" href="contact.html">Get Started</a>
       </div>
-      <picture>
-        <source type="image/jpg" srcset="images/piano-hero.jpg 1200w, images/piano-hero.jpg 800w, images/piano-hero.jpg 400w" sizes="(max-width: 768px) 92vw, 520px">
-        <img src="images/piano-hero.jpg" alt="Piano keys and lesson banner" width="1200" height="675" decoding="async" fetchpriority="high">
-      </picture>
     </div>
   </section>
 
@@ -51,21 +56,21 @@
     <h2>Who These Lessons Are For</h2>
     <div class="grid cards">
       <article class="card">
-        <img src="images/lesson-beginner-800.webp" srcset="images/lesson-beginner-400.webp 400w, images/lesson-beginner-800.webp 800w" sizes="(max-width: 600px) 100vw, 320px" alt="Beginner lessons preview" width="800" height="450" loading="lazy" decoding="async">
+        <img src="images/lesson-beginner-800.jpg" srcset="images/lesson-beginner-400.jpg 400w, images/lesson-beginner-800.jpg 800w" sizes="(max-width: 600px) 100vw, 320px" alt="Beginner lessons preview" width="800" height="383" loading="lazy" decoding="async">
         <div class="pad">
           <h3>Beginners</h3>
           <p>Start with posture, key names, simple rhythms, and reading basics—no prior experience required.</p>
         </div>
       </article>
       <article class="card">
-        <img src="images/lesson-intermediate-800.webp" srcset="images/lesson-intermediate-400.webp 400w, images/lesson-intermediate-800.webp 800w" sizes="(max-width: 600px) 100vw, 320px" alt="Intermediate lessons preview" width="800" height="450" loading="lazy" decoding="async">
+        <img src="images/lesson-intermediate-800.jpg" srcset="images/lesson-intermediate-400.jpg 400w, images/lesson-intermediate-800.jpg 800w" sizes="(max-width: 600px) 100vw, 320px" alt="Intermediate lessons preview" width="800" height="335" loading="lazy" decoding="async">
         <div class="pad">
           <h3>Intermediate Players</h3>
           <p>Build technique with scales, arpeggios, chord patterns, and confident accompaniment skills.</p>
         </div>
       </article>
       <article class="card">
-        <img src="images/lesson-advanced-800.webp" srcset="images/lesson-advanced-400.webp 400w, images/lesson-advanced-800.webp 800w" sizes="(max-width: 600px) 100vw, 320px" alt="Advanced lessons preview" width="800" height="450" loading="lazy" decoding="async">
+        <img src="images/lesson-advanced-800.jpg" srcset="images/lesson-advanced-400.jpg 400w, images/lesson-advanced-800.jpg 800w" sizes="(max-width: 600px) 100vw, 320px" alt="Advanced lessons preview" width="800" height="348" loading="lazy" decoding="async">
         <div class="pad">
           <h3>Advanced Musicians</h3>
           <p>Refine expression, phrasing, and performance—turn your work into convincing musical storytelling.</p>
@@ -89,7 +94,6 @@
     <p>&copy; <span id="year"></span> At‑Home Piano Lessons • <a href="references.html">References</a></p>
   </div>
 </footer>
-<script src="js/main.js"></script>
 
 </body>
 </html>

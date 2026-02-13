@@ -2,22 +2,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Piano Lessons by Level | At‑Home Piano Lessons</title>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images/piano-logo.png" type="logo">
-<link rel="stylesheet" href="styles/styles.css">
-
+  <link rel="icon" href="images/piano-logo.png" type="image/png">
+  <link rel="stylesheet" href="styles/styles.css">
   <meta name="description" content="Browse beginner, intermediate, and advanced piano lessons with clear outcomes and topics.">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/lessons.js" defer></script>
 </head>
 <body data-page="lessons">
 
 <a href="#main" class="skip-link">Skip to content</a>
 <header>
-  <div class="container navbar" role="navigation" aria-label="Main">
+  <div class="container navbar">
     <a class="brand" href="index.html"><img src="images/piano-logo.png" alt="Logo"><span>At‑Home Piano Lessons</span></a>
-    <nav>
+    <nav aria-label="Main">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="lessons.html">Lessons</a></li>
@@ -32,8 +32,8 @@
 <main id="main" class="container">
   <section>
     <h1>Lessons by Level</h1>
-    <p class="meta">Choose a level to filter lessons. Add any lesson to your personal plan.</p>
-    <div style="display:flex; gap:.5rem; align-items:center; margin:.5rem 0 1rem;">
+    <p class="meta">Choose a level to filter lessons, or view all available lessons at once.</p>
+    <div class="flex-center">
       <label for="level-filter"><strong>Level:</strong></label>
       <select id="level-filter" aria-label="Filter lessons by level">
         <option>All</option>
@@ -63,7 +63,6 @@
     <p>&copy; <span id="year"></span> At‑Home Piano Lessons • <a href="references.html">References</a></p>
   </div>
 </footer>
-<script src="js/main.js"></script>
 
 </body>
 </html>
